@@ -1,6 +1,9 @@
 # Udagram Image Filtering Microservice
 
-Udagram is a simple cloud application developed alongside the Udacity Cloud Engineering Nanodegree. It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.
+Here is the github repo link for the project:https://github.com/kabeer-prog/image-filter-starter-code
+Here is a url to the live project: http://udagram-kabeer-dev.us-east-1.elasticbeanstalk.com/
+
+Udagram is a simple cloud application developed alongside the Udacity Cloud Engineering Nanodegree. It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.This projects is a simple image filtering program that takes in an image, filters it and deployed on AWS beanstalk.
 
 The project is split into three parts:
 1. [The Simple Frontend](https://github.com/udacity/cloud-developer/tree/master/course-02/exercises/udacity-c2-frontend)
@@ -16,11 +19,10 @@ You'll need to create a new node server. Open a new terminal within the project 
 
 1. Initialize a new project: `npm i`
 2. run the development server with `npm run dev`
-### Udagram Image Filtering Project
-This projects is a simple image filtering program that takes in an image, filters it and deployed on AWS beanstalk.
 
-Here is the github repo link for the project:https://github.com/kabeer-prog/image-filter-starter-code
-Here is a url to the live project: http://udagram-kabeer-dev.us-east-1.elasticbeanstalk.com/
+
+
+
 ### Create a new endpoint in the server.ts file
 
 The starter code has a task for you to complete an endpoint in `./src/server.ts` which uses query parameter to download an image from a public URL, filter the image, and return the result.
