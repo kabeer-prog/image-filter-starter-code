@@ -31,38 +31,29 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   /**************************************************************************** */
 
 
-  app.get('/filteredimage', async (req: Request, res: Response) => {
-    const {image_url} = req.query.image_url.toString();
-    if (!image_url) {
-      res.status(400).send('Image url is required');
-    }
-
-    const filtered_image = await filterImageFromURL(image_url);
-
-    res.status(200).sendFile(filtered_image, () => {
-      deleteLocalFiles([filtered_image]);
-    });
-
+  app.get('/filteredimage', async (req:Request, res:Response) => {
     
-  });
-
-  // app.get('/filteredimage', async (req:Request, res:Response) => {
-  //   const {image_url}:string = req.query.image_url;
-  //   if (!image_url) {
-  //     return res.status(400).send('Image url is required');
-  //   }
-  //   try {
-  //     const filteredpath: string  = await filterImageFromURL(image_url);
-  //     return res.sendFile(filteredpath, async () => {
-  //       await deleteLocalFiles([filteredpath]);
-  //     })
       
-  //   } catch (error) {
-  //     res.status(404).send("file not found")
+    let image_url = req.query
+                      .image_url.toString();
+    if (!image_url) {
+      return res.status(400).send('Image url is required');
+    }
+    try {
+      const filteredpath: string  = await filterImageFromURL(image_url);
+      return res.sendFile(filteredpath, async () => {
+        await deleteLocalFiles([filteredpath]);
+      })
+      
+    } catch (error) {
+      res.status(404).send("file not found")
 
-  //   }
-  // }
-  // );
+    }
+  }
+  ); 
+
+  
+
   //! END @TODO1
   
 
