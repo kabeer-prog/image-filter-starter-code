@@ -1,7 +1,7 @@
 # Udagram Image Filtering Microservice
 
 Here is the github repo link for the project:https://github.com/kabeer-prog/image-filter-starter-code
-Here is a url to the live project: http://udagram-kabeer-dev.us-east-1.elasticbeanstalk.com/
+Here is a url to the live project: http://udagram-kabeer-dev2.us-east-1.elasticbeanstalk.com/
 
 Udagram is a simple cloud application developed alongside the Udacity Cloud Engineering Nanodegree. It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.This projects is a simple image filtering program that takes in an image, filters it and deployed on AWS beanstalk.
 
@@ -38,7 +38,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 Follow the process described in the course to `eb init` a new application and `eb create` a new environment to deploy your image-filter service! Don't forget you can use `eb deploy` to push changes.
 
 ## Stand Out (Optional)
-My Elasticbeanstalk endpoint : http://udagram-kabeer-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://ichef.bbci.co.uk/news/976/cpsprodpb/C020/production/_126248194_gettyimages-1242372804.jpg
+My Elasticbeanstalk endpoint : http://udagram-kabeer-dev2.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://ichef.bbci.co.uk/news/976/cpsprodpb/C020/production/_126248194_gettyimages-1242372804.jpg
 
 ### Refactor the course RESTapi
 
